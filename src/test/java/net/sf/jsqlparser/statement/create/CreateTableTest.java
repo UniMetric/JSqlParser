@@ -641,4 +641,10 @@ public class CreateTableTest {
         String sql = "CREATE TABLE test (startdate DATE) DISABLE ROW MOVEMENT AS SELECT 1 FROM dual";
         assertSqlCanBeParsedAndDeparsed(sql);
     }
+
+    @Test
+    public void partitionedTable() throws JSQLParserException {
+        String sql = "CREATE TABLE t1 (f1 string COMMENT 'my comment') COMMENT 't1' PARTITIONED BY (`f2` string COMMENT 'f2') STORED AS ORC";
+        assertSqlCanBeParsedAndDeparsed(sql);
+    }
 }
