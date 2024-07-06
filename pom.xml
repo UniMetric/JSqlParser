@@ -58,16 +58,28 @@
         </developer>
     </developers>
 
+    <pluginRepositories>
+        <pluginRepository>
+            <id>nexus-public</id>
+            <url>https://nexus.i.cwllll.com/repository/maven-public/</url>
+        </pluginRepository>
+    </pluginRepositories>
     <distributionManagement>
         <repository>
-            <id>sonatype-nexus-staging</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+            <id>nexus-releases</id>
+            <url>https://nexus.i.cwllll.com/repository/maven-releases/</url>
         </repository>
         <snapshotRepository>
-            <id>sonatype-nexus-snapshots</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <id>nexus-snapshots</id>
+            <url>https://nexus.i.cwllll.com/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
+    <repositories>
+        <repository>
+            <id>nexus-public</id>
+            <url>https://nexus.i.cwllll.com/repository/maven-public/</url>
+        </repository>
+    </repositories>
 
     <scm>
         <connection>scm:git:https://github.com/JSQLParser/JSqlParser.git</connection>
